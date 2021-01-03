@@ -1,0 +1,72 @@
+{% extends 'base.html' %}
+
+  {% block title %}
+ {% endblock title %}
+ {% block content %}
+<div class="p-3 mb-2 bg-secondary text-white">
+<div class="container">
+<br>
+
+    <form method="POST" action="{% url 'Cresult' %}"   class="row input-group mb-3">
+        {% csrf_token %}
+<center><h2 class="p-3 mb-2 bg-danger text-white">Choose Correct Answer's</h2></center>
+
+        <div class="p-3 mb-2 bg-transparent text-dark">
+    <h4 class="text-info ">{{Q1.id}}. {{Q1.Question}}</h4>
+<br><br>
+    <select class="form-select form-select-sm" name="1">
+
+  <option name="1" value="{{Q1.A}}" class="text-secondary" >{{Q1.A}}</option>
+  <option name="1A" value="{{Q1.B}}" class="text-secondary" >{{Q1.B}}</option>
+  <option name="1A" value="{{Q1.C}}" class="text-secondary" >{{Q1.C}}</option>
+        <option name="1A"  value="{{Q1.D}}">{{Q1.D}}</option>
+    </select>
+              <h4 class="text-info ">{{Q2.id}}. {{Q2.Question}}</h4>
+<br><br>
+<select class="form-select form-select-sm" name="2">
+
+  <option name="1" value="{{Q2.A}}" class="text-secondary" >{{Q2.A}}</option>
+  <option name="1A" value="{{Q2.B}}" class="text-secondary" >{{Q2.B}}</option>
+  <option name="1A" value="{{Q2.C}}" class="text-secondary" >{{Q2.C}}</option>
+        <option name="1A"  value="{{Q2.D}}">{{Q2.D}}</option>
+    </select>
+              <h4 class="text-info ">{{Q3.id}}. {{Q3.Question}}</h4>
+<br><br>
+            <select class="form-select form-select-sm" name="3">
+
+  <option name="1" value="{{Q3.A}}" class="text-secondary" >{{Q3.A}}</option>
+  <option name="1A" value="{{Q3.B}}" class="text-secondary" >{{Q3.B}}</option>
+  <option name="1A" value="{{Q3.C}}" class="text-secondary" >{{Q3.C}}</option>
+        <option name="1A"  value="{{Q3.D}}">{{Q3.D}}</option>
+    </select>
+              <h4 class="text-info ">{{Q4.id}}. {{Q4.Question}}</h4>
+<br><br>
+            <select class="form-select form-select-sm" name="4">
+
+  <option name="1" value="{{Q4.A}}" class="text-secondary" >{{Q4.A}}</option>
+  <option name="1A" value="{{Q4.B}}" class="text-secondary" >{{Q4.B}}</option>
+  <option name="1A" value="{{Q4.C}}" class="text-secondary" >{{Q4.C}}</option>
+        <option name="1A"  value="{{Q4.D}}">{{Q4.D}}</option>
+    </select>
+              <h4 class="text-info ">{{Q5.id}}. {{Q5.Question}}</h4>
+<br><br>
+            <select class="form-select form-select-sm" name="5">
+
+  <option name="1" value="{{Q5.A}}" class="text-secondary" >{{Q5.A}}</option>
+  <option name="1A" value="{{Q5.B}}" class="text-secondary" >{{Q5.B}}</option>
+  <option name="1A" value="{{Q5.C}}" class="text-secondary" >{{Q5.C}}</option>
+        <option name="1A"  value="{{Q5.D}}">{{Q5.D}}</option>
+    </select>
+        </div>
+
+
+
+    <center> <button type="submit" class="btn btn-primary col-lg-2">Submit</button></center>
+
+
+
+    </form>
+
+</div>
+</div>
+{% endblock content %}
